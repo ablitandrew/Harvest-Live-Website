@@ -6,9 +6,9 @@
 
 		<!-- Basic -->
 		<meta charset="utf-8">
-		<title>ABL Works - Quotation and Job Tracking Made Easy - Tradie Work Apps</title>		
+		<title>Harvest Live - Farm Management Systems </title>		
 		<meta name="keywords" content="quoting, estimating, job tracking, staff management, tradie app" />
-		<meta name="description" content="ABL Works - Quotation and Job Tracking Made Easy - Tradie Work Apps">
+		<meta name="description" content="Harvest Live - Quotation and Job Tracking Made Easy - Tradie Work Apps">
 		<meta name="author" content="ABL IT Business IT Specialists">
 
 		<!-- Mobile Metas -->
@@ -79,9 +79,9 @@
 						</form>
 					</div>
 					<ul class="social-icons">
-						<li class="facebook"><a href="https://www.facebook.com/ablbusinessit" target="_blank" title="Facebook">Facebook</a></li>
-						<li class="twitter"><a href="https://twitter.com/ablworks" target="_blank" title="Twitter">Twitter</a></li>
-						<li class="linkedin"><a href="https://www.linkedin.com/company/abl-it-business-it-specialists" target="_blank" title="Linkedin">Linkedin</a></li>
+						<li class="facebook"><a href="https://www.facebook.com/harvestlive" target="_blank" title="Facebook">Facebook</a></li>
+						<li class="twitter"><a href="https://twitter.com/harvestlive" target="_blank" title="Twitter">Twitter</a></li>
+						<li class="linkedin"><a href="https://www.linkedin.com/company/harvest-live" target="_blank" title="Linkedin">Linkedin</a></li>
 					</ul>
 					<nav>
 						<ul class="nav nav-pills nav-top">
@@ -237,19 +237,19 @@
 					<div class="row center">
 						<div class="col-md-12">
 							<h2 class="short word-rotator-title">
-								ABL Works is
+								Harvest Live is
 								<strong class="inverted">
 									<span class="word-rotate">
 										<span class="word-rotate-items">
 											<span>simple</span>
-											<span>useful</span>
+											<span>powerful</span>
 											<span>awesome</span>
 										</span>
 									</span>
 								</strong>
 							</h2>
 							<p class="featured lead">
-								Manage & Grow your Business. Quoting, Job Tracking & Invoicing. Fully integrated with Xero.
+								Manage & Grow your Farm. Picking, Packing & Inventory. Fully integrated with Xero.
 							</p>
 						</div>
 					</div>
@@ -265,7 +265,7 @@
 							<div class="col-md-2 col-md-offset-1">
 								<div class="process-image" data-appear-animation="bounceIn">
 									<img src="img/home-concept-item-1.png" alt="" />
-									<strong>Create Quotes</strong>
+									<strong>Schedule Work</strong>
 								</div>
 							</div>
 							<div class="col-md-2">
@@ -277,7 +277,7 @@
 							<div class="col-md-2">
 								<div class="process-image" data-appear-animation="bounceIn" data-appear-animation-delay="400">
 									<img src="img/home-concept-item-3.png" alt="" />
-									<strong>Track Jobs</strong>
+									<strong>Track Invoices</strong>
 								</div>
 							</div>
 							<div class="col-md-4 col-md-offset-1">
@@ -303,7 +303,7 @@
 						<div class="row">
 							<div class="col-md-8">
 								<p>
-									The fastest way to grow your business with <em>job management</em>
+									The fastest way to grow your business with <em>farm management</em>
 									<span>Check out our options and features included.</span>
 								</p>
 							</div>
@@ -440,7 +440,7 @@
 									</div>
 									<div id="collapseTwo" class="accordion-body collapse">
 										<div class="panel-body">
-											ABL Works generates the reporting that you need to know, and doesn't overcomplicate anything. It will send you simple reports that are easy to understand - so that you can focus on what matters.
+											Harvest Live generates the reporting that you need to know, and doesn't overcomplicate anything. It will send you simple reports that are easy to understand - so that you can focus on what matters.
 										</div>
 									</div>
 								</div>
@@ -455,7 +455,7 @@
 									</div>
 									<div id="collapseThree" class="accordion-body collapse">
 										<div class="panel-body">
-											You don't need to work 24 hours a day. Let ABL Works handle all of your updating and emailing clients. You put in the basics and ABL Works will do the rest. 
+											You don't need to work 24 hours a day. Let Harvest Live handle all of your updating and emailing clients. You put in the basics and Harvest Live will do the rest. 
 										</div>
 									</div>
 								</div>
@@ -477,9 +477,9 @@
 										</span>
 									</span>
 								</strong>
-								about ABL Works...
+								about Harvest Live...
 							</h2>
-							<h4 class="lead tall">Hundreds are starting out with ABL Works. Join them and never look back.</h4>
+							<h4 class="lead tall">Hundreds are starting out with Harvest Live. Join them and never look back.</h4>
 						</div>
 					</div>
 					<div class="row center">
@@ -529,7 +529,7 @@
 																<span class="day">22</span>
 																<span class="month">Oct</span>
 															</div>
-															<h4><a href="blog-post.html">ABL Works Website Live!</a></h4>
+															<h4><a href="blog-post.html">Harvest Live Website Live!</a></h4>
 															<p>Ten ways to make your business clear and effective. <a href="/" class="read-more">read more <i class="icon icon-angle-right"></i></a></p>
 														</article>
 													</div>
@@ -539,8 +539,8 @@
 																<span class="day">22</span>
 																<span class="month">Oct</span>
 															</div>
-															<h4><a href="blog-post.html">How to make ABL work for you</a></h4>
-															<p>Ten ways ABL Works can make a difference to your business. <a href="/" class="read-more">read more <i class="icon icon-angle-right"></i></a></p>
+															<h4><a href="blog-post.html">How to make Harvest Live work for you</a></h4>
+															<p>Ten ways Harvest Live can make a difference to your business. <a href="/" class="read-more">read more <i class="icon icon-angle-right"></i></a></p>
 														</article>
 													</div>
 												</div>
@@ -600,7 +600,7 @@
 												<div class="col-md-12">
 													<blockquote class="testimonial">
 													<p>My business was struggling to gain momentum in the industry. We've been around for years, grown to over 10 staff and then downsized. I've seen the ups and downs of small business. </p>
-                                                    <p>ABL Works was exactly what we needed to get our team organised, know what we had to quote and exactly what we had to actually get out and do.
+                                                    <p>Harvest Live was exactly what we needed to get our team organised, know our harvest schedule and exactly what we had to actually get out and do.
                                                     The proof is in the pudding, this thing works.</p>
 													</blockquote>
 													<div class="testimonial-arrow-down"></div>
@@ -615,7 +615,7 @@
 											<div>
 												<div class="col-md-12">
 													<blockquote class="testimonial">
-													<p>This App is exactly what I was looking for. Now I play golf and keep an eye on what the guys on the road are up to. Simple.</p>
+													<p>This App is exactly what I was looking for. Now I know exactly what stage every block of dirt is sitting at. Simple.</p>
 													</blockquote>
 													<div class="testimonial-arrow-down"></div>
 													<div class="testimonial-author">
@@ -664,7 +664,7 @@
 						</div>
 						<div class="col-md-3">
 							<h4>Latest Tweet</h4>
-							<div id="tweet" class="twitter" data-account-id="ablworks">
+							<div id="tweet" class="twitter" data-account-id="harvestlive">
 								<p>
             <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
           </p>
@@ -674,7 +674,7 @@
 							<div class="contact-details">
 								<h4>Contact Us</h4>
 								<ul class="contact">
-									<li><p><i class="icon icon-map-marker"></i> <strong>Address:</strong> Suite 16, 220 Boundary Street<br> Spring Hill QLD 4000</p></li>
+									<li><p><i class="icon icon-map-marker"></i> <strong>Address:</strong> Unit 4, 255 Leitchs Road<br> Brendale QLD 4500</p></li>
 									<li><p><i class="icon icon-phone"></i> <strong>Phone:</strong> 1300 133 317</p></li>
 									<li><p><i class="icon icon-envelope"></i> <strong>Email:</strong> <a href="mailto:support@ablit.com.au">support@ablit.com.au</a></p></li>
 								</ul>
@@ -684,9 +684,9 @@
 							<h4>Follow Us</h4>
 							<div class="social-icons">
 								<ul class="social-icons">
-									<li class="facebook"><a href="http://www.facebook.com/ablbusinessit" target="_blank" data-placement="bottom" rel="tooltip" title="Facebook">Facebook</a></li>
-									<li class="twitter"><a href="http://www.twitter.com/ablworks" target="_blank" data-placement="bottom" rel="tooltip" title="Twitter">Twitter</a></li>
-									<li class="linkedin"><a href="https://www.linkedin.com/company/abl-it-business-it-specialists" target="_blank" data-placement="bottom" rel="tooltip" title="Linkedin">LinkedIn</a></li>
+									<li class="facebook"><a href="http://www.facebook.com/harvestlive" target="_blank" data-placement="bottom" rel="tooltip" title="Facebook">Facebook</a></li>
+									<li class="twitter"><a href="http://www.twitter.com/harvestlive" target="_blank" data-placement="bottom" rel="tooltip" title="Twitter">Twitter</a></li>
+									<li class="linkedin"><a href="https://www.linkedin.com/company/harvest-live" target="_blank" data-placement="bottom" rel="tooltip" title="Linkedin">LinkedIn</a></li>
 								</ul>
 							</div>
 						</div>
@@ -699,12 +699,12 @@
 								&nbsp;
 							</div>
 							<div class="col-md-7">
-								<p>© Copyright 2014 ABL IT Business IT Specialists. All Rights Reserved.</p>
+								<p>© Copyright 2014-2018 ABL IT Business IT Specialists. All Rights Reserved.</p>
 							</div>
 							<div class="col-md-4">
 								<nav id="sub-menu">
 									<ul>
-										<li><a href="#">FAQ's</a></li>
+										<li><a href="#">FAQ</a></li>
 										<li><a href="#">Sitemap</a></li>
 										<li><a href="#">Contact</a></li>
 									</ul>
