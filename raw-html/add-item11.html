@@ -1,0 +1,123 @@
+
+<html>
+<head>
+	
+</head>
+<form name="form1" method="post" width="500px" height="500px">
+	<div id="text-blank" style="height:20px;width:150px;">&nbsp;&nbsp;</div>
+	<h5>Length :</h5>
+<div id="TextBoxesGroup">
+	<div id="TextBoxDiv1" >
+		<input id="value" name="value[]" type="text" class="item-cost">&nbsp;&nbsp;<div style="width:50px">&nbsp;&nbsp;</div>
+	</div>
+</div>
+<label id="paymentamountlabel" class="paymentamountlabel"></label>
+<input value="Add fields" id="addButton" type="button">
+<input value="Remove fields" id="removeButton" type="button">
+<!-- <input value="submit" id="getButtonValue" name="submit" type="submit"> -->
+</form>
+<table class="table table-condensed">
+	<thead>
+    	<tr>
+        	<th>SN</th>
+            <th>Item Name</th>
+            <th>Quantity</th>
+            <th>Unit Price</th>
+            <th>Cost</th>            
+        </tr>
+    </thead>
+</table>
+<script src = "http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript">
+
+    $(document).ready(function(){
+
+	    var counter = 2;
+		
+	    $("#addButton").click(function () {
+				
+			if(counter>100){
+		        alert("Only 100 textboxes allow");
+		        return false;
+		    }   
+			
+			var newTextBoxDiv = $(document.createElement('div')).attr("id", 'TextBoxDiv' + counter);
+                newTextBoxDiv.after().html(
+				
+				'<input type="text" name="value[]" id="value" value="" class="item-cost" >&nbsp;&nbsp;<div style="width:50px">&nbsp;&nbsp;</div>');
+            
+			newTextBoxDiv.appendTo("#TextBoxesGroup");
+				
+		    counter++;
+	    });
+
+	    $("#removeButton").click(function () {
+		    if(counter==1){
+		        alert("No more textbox to remove");
+		        return false;
+		    }   
+	        counter--;
+			//$(".paymentamountlabel").html('');
+	        $("#TextBoxDiv" + counter).remove();
+		});
+		
+		 /*$("#getButtonValue").click(function () {
+		
+		 	var msg = '';
+			for(i=1; i<counter; i++){
+		 		msg += $('#key' + i).val() + " : " + $('#value' + i).val();
+		 	}
+		    	alert(msg);
+		 });*/
+			
+		$(document).on('change',".item-cost",function(){
+			var total = 0;
+			$(".paymentamountlabel").empty();
+			$('.item-cost').each(function(){
+				var dis = parseFloat(this.value);
+				//console.log(dis);
+				if(!isNaN(dis)){
+					dis = parseFloat(dis);
+					total = total + dis;
+				}
+			});
+			 $(".paymentamountlabel").text(total);
+       		 //console.log(total);
+		});		
+	
+
+    	 $('#addButton').click(function(){
+      		var amountSum=0;
+       		$('.item-cost').each(function(){
+           		if (this.value != "")
+           		{
+           			//alert($(this).val());
+           			amountSum+=parseInt(this.value);
+           		}
+       		});
+      // alert('foo');
+     // $(".paymentamountlabel").empty('');
+       $(".paymentamountlabel").text(amountSum);
+       console.log(amountSum);
+
+       });
+    	 $('#removeButton').click(function(){
+      		var amountSum=$(".paymentamountlabel").html();
+       		$('.item-cost').each(function(){
+           		if (this.value != "")
+           		{
+           			//alert($(this).val());
+           			amountSum-=parseInt(this.value);
+           		}
+       		});
+      // alert('foo');
+     // $(".paymentamountlabel").empty('');
+       $(".paymentamountlabel").text(amountSum);
+       console.log(amountSum);
+
+       });
+		
+  });
+</script>
+
+</html>

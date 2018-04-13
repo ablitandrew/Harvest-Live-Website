@@ -1,0 +1,227 @@
+<html>
+<head>
+	<style type="text/css">
+		.remove-item-row {
+    		padding: 2px 5px;
+		}
+	</style>
+</head>
+  <div class="table-container">
+    <table class="table item-holder">
+      <thead>
+        <tr>
+          <th class="th-item-qty col-md-2" style="text-align:center;">Quantity</th>
+          <th class="th-item-units col-md-2" style="text-align:center;">Length</th>
+          <th class="th-item-name col-md-5" style="text-align:center;">Item</th>
+          <th class="th-item-cost col-md-2" style="text-align:center;">Price</th>
+          <th class="th-item-hide col-md-1" style="text-align:center;">&nbsp;</th>
+        </tr>
+      </thead>
+      <tbody>
+      	<tr class="item-row">
+          
+          <td class="td-item-qty" style="text-align:center;"><input type="number" name="item-qty[]" class="item-row-input item-qty col-md-12" style="border: 2px solid #CCC;padding:0"></td>
+          <td class="td-item-units" style="text-align:center;"><input type="text" name="item-units[]" class="item-row-input item-units col-md-12" style="border: 2px solid #CCC;padding:0"></td>
+          <td class="td-item-name" style="text-align:center;"><input type="text" name="item-name[]" class="item-row-input item-name col-md-12" style="border: 2px solid #CCC;padding:0"></td>
+          <td class="td-item-cost" style="text-align:center;"><input type="text" name="item-cost[]" class="item-row-input item-cost col-md-12" style="border: 2px solid #CCC;padding:0"></td>
+          <td class="td-item-hide" style="text-align:center;"><input type="button" class="remove-item-row" disabled="disabled" value="X"></td>
+        </tr>
+      <tfoot>
+        <tr>
+          <th class="total" colspan="3" style="text-align:right">Total</th>
+          <th colspan="2" style="text-align:left;">-&nbsp;&nbsp;&nbsp;<label id="paymentamountlabel" class="paymentamountlabel"></label></th>
+          
+        </tr>
+      </tfoot>
+        </tbody>
+      
+    </table>
+    <!--item-holder -->
+    
+    <div class="hidden-add-item-clone">
+      <table>
+        <tr class="item-row">
+          
+          <td class="td-item-qty" style="text-align:center;"><input type="number" name="item-qty[]" class="item-row-input item-qty col-md-12" style="border: 2px solid #CCC;padding:0"></td>
+          <td class="td-item-units" style="text-align:center;"><input type="text" name="item-units[]" class="item-row-input item-units col-md-12" style="border: 2px solid #CCC;padding:0"></td>
+          <td class="td-item-name" style="text-align:center;"><input type="text" name="item-name[]" class="item-row-input item-name col-md-12" style="border: 2px solid #CCC;padding:0"></td>
+          <td class="td-item-cost" style="text-align:center;"><input type="text" name="item-cost[]" class="item-row-input item-cost col-md-12" style="border: 2px solid #CCC;padding:0"></td>
+          <td class="td-item-hide" style="text-align:center;"><a class="remove-item-row">X</a></td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- hidden-add-item-clone -->
+    
+    <div class="addmore add-item"><a>Add Item</a></div>
+  </div>
+                       
+<!-- <form name="form1" method="post" width="500px" height="500px">
+	<div id="text-blank" style="height:20px;width:150px;">&nbsp;&nbsp;</div>
+	<h5>Length :</h5>
+	<center>
+<div id="TextBoxesGroup">
+	<div id="TextBoxDiv1" >
+		<input id="value" name="value[]" type="text" class="item-cost">&nbsp;&nbsp;<div style="width:50px">&nbsp;&nbsp;</div>
+	</div>
+</div>
+<label id="paymentamountlabel" class="paymentamountlabel"></label>
+
+<input value="Add fields" id="addButton" type="button" class="btn btn-success">
+<input value="Remove fields" id="removeButton" type="button" class="btn btn-danger">
+</center>
+<!-- <input value="submit" id="getButtonValue" name="submit" type="submit"> 
+</form>
+<br><br>
+<table class="table table-condensed">
+	<thead>
+    	<tr>
+        	<th>SN</th>
+            <th>Item Name</th>
+            <th>Quantity</th>
+            <th>Unit Price</th>
+            <th>Cost</th>            
+        </tr>
+        
+    </thead>
+    <tbody>
+    	<tr>
+        	<td>1</td>
+        	<td><input type="text" name="name" value="" class="col-md-5 " style="border: 2px solid #CCC;padding:0"/></td>
+        	<td><input type="number" name="quantity" value="" class="col-md-5" min="1" max="50" style="border: 2px solid #CCC;padding:0;text-align:center"/></td>
+        	<td><input type="text" name="unit" value="" class="col-md-5" style="border: 2px solid #CCC;padding:0"/></td>
+        	<td><input type="text" name="cost" value="" class="col-md-5" style="border: 2px solid #CCC;padding:0"/></td>
+        </tr>
+    </tbody>
+</table> -->
+<script src = "http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+
+	    /*$("#removeButton").click(function () {
+		   
+      		var amountSum=parseFloat($(".paymentamountlabel").html());
+      		$(".paymentamountlabel").empty('');
+       		$('.item-cost').each(function(){
+           		if (this.value != "")
+           		{
+           			rmmns=parseFloat(this.value)
+           			//alert($(this).val());
+           		}
+       		});
+   			amountSum=amountSum-rmmns;
+			if(counter==1){
+		        alert("No more textbox to remove");
+		        return false;
+		    }   
+	        counter--;
+			//$(".paymentamountlabel").html('');
+	        $("#TextBoxDiv" + counter).remove();
+
+      // alert('foo');
+      
+       $(".paymentamountlabel").text(amountSum);
+       console.log(amountSum);
+
+		});*/
+		
+		 
+			
+		$(document).on('change',".item-cost",function(){
+			var total = 0;
+			$(".paymentamountlabel").empty();
+			$('.item-cost').each(function(){
+				var dis = parseFloat(this.value);
+				//console.log(dis);
+				if(!isNaN(dis)){
+					dis = parseFloat(dis);
+					total = total + dis;
+				}
+			});
+			 $(".paymentamountlabel").text(total);
+       		 //console.log(total);
+		});	
+
+		$(document).on('click',".item-units",function(){
+    $('input.item-units').blur(function(){
+        var num = parseFloat($(this).val());
+        var cleanNum = num.toFixed(2);
+        $(this).val(cleanNum);
+        if(num/cleanNum < 1){
+            $('#error').text('Please enter only 2 decimal places, we have truncated extra points');
+            }
+        });
+    });	
+	
+
+    	 /*$('#addButton').click(function(){
+      		var amountSum=0;
+       		$('.item-cost').each(function(){
+           		if (this.value != "")
+           		{
+           			//alert($(this).val());
+           			amountSum+=parseInt(this.value);
+           		}
+       		});
+      // alert('foo');
+     // $(".paymentamountlabel").empty('');
+       $(".paymentamountlabel").text(amountSum);
+       console.log(amountSum);
+
+       });*/
+
+		
+  });
+</script>
+<script src="js/jquery.js"></script> 
+<script src="js/bootstrap.min.js"></script> 
+<script src="js/jquery.autocomplete.min.js"></script> 
+<script src="js/autocomplete-item-data.js"></script> 
+<script src="js/jquery.autosize.input.js"></script> 
+<script src="js/main.js"></script>
+<script type="text/javascript">
+	$(document).on('click',".item-name",function(){
+	
+	$('.item-name').autocomplete({
+    lookup: itemData, // see autocomplete-json-data.js
+    onSelect: function (suggestion) {
+    	//alert("hello");
+     
+			
+			
+			
+    }
+});
+	});
+
+	$(".remove-item-row").click(function(){
+		var cost = parseFloat($(".paymentamountlabel").text());
+		var price = $(this).parent().parent().find('.item-cost').val();
+		 console.log($(this).parent().parent().find('.item-cost').val());
+		 cost -=parseFloat(price);
+		 $(".paymentamountlabel").html(cost);
+	});
+  
+	
+
+
+/*function load_item(cat_id){
+        $(".item-name").autocomplete({
+          serviceUrl:'<?php echo $this->webroot; ?>customersquotes/items?id='+cat_id,
+          minChars:2,
+          onSelect: function (suggestion) {
+            //console.log(suggestion);
+            var itemId = $(this).attr('data');
+            $(this).parent().parent().parent().find('.item-units').val(suggestion.units);
+            $(this).parent().parent().parent().find(".item-qty").val(1); 
+            $(this).parent().parent().parent().find('.item-cost').val(suggestion.price);
+            var cost = suggestion.price;
+            $(this).parent().parent().parent().find('.itemId').val(suggestion.data);
+            $(this).parent().parent().parent().find('.units_price').val(suggestion.price);
+            newTotalCost();
+          }
+        });
+      }*/
+</script>
+
+</html>

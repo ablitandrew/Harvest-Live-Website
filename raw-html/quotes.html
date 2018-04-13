@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>ABL Works Apps</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+
+<!-- Le styles -->
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/custom.css" rel="stylesheet">
+
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+<div class="header">
+  <div class="container">
+    <div class="row">
+      <div class="logo col-md-6"><img src="img/abl.png" alt=""></div>
+      <div class="menu-right col-md-6"><span><a href="#">Agua Plumbing</a></span> | <span class="sign-out"><a href="#">Sign Out</a></span></div>
+    </div>
+  </div>
+  <div class="main-menu">
+    <div class="container">
+      <div class="row">
+        <div  class="col-md-12">
+          <ul class="nav navbar-nav">
+            <li> <a href="index.html">Dashboard</a> </li>
+            <li> <a href="/app/users/#myModal" data-toggle="modal" id="cPassword">Change Password</a> </li>
+            <li> <a href="#">Clients</a> </li>
+            <li class="active"> <a href="quotes.html">Quotes</a> </li>
+            <li> <a href="#">Jobs</a> </li>
+            <li> <a href="#">Invoices</a> </li>
+            <li> <a href="#">Calendar</a> </li>
+            <li> <a href="#">Live Assign Jobs</a> </li>
+            <li> <a href="#">Interactive Map</a> </li>
+            <li class="support"> <a href="#">Support</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- main menu --> 
+</div>
+<!-- header -->
+
+<div class="main-content">
+  <div class="welcome-text container">
+    <div class="row">
+      <div class="col-md-12">
+        <p>Welcome Back, Andy</p>
+      </div>
+    </div>
+  </div>
+  <div class="quote-content">
+    <div class="container">
+      <div class="row">
+        <div class="left-content col-md-9">
+          <ul class="nav nav-tabs" id="quote-tabs">
+            <li class="active"><a href="#draft-quote" data-toggle="tab">Draft Quotes</a></li>
+            <li><a href="#pending-quote" data-toggle="tab">Pending Quotes</a></li>
+            <li><a href="#archive-quote" data-toggle="tab">Archive</a></li>
+          </ul>
+          <div class="tab-content">
+            <div class="tab-pane active" id="draft-quote">
+            	<div class="tab-search-container">
+              <form class="navbar-form navbar-right" role="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Search">
+                </div>
+                <button type="submit" class="btn btn-default">Search</button>
+              </form>
+              </div><!-- tab-search-container -->
+              
+              <div class="quoting">
+                
+                <div class="row">
+                  <table class="table zebra-stripe">
+                    <thead>
+                      <tr>
+                        <th><input type="checkbox" name="check[]" class="check-all"></th>
+                        <th>#</th>
+                        <th>Title</th>
+                        <th colspan="2" class="actiontitle">Action</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td data-th="Check"><input type="checkbox" name="check[]" class="checkbox-action"></td>
+                        <td data-th="#">1</td>
+                        <td data-th="Title"><a href="">Q894, 54 Wall St, Adelaide</a></td>
+                        <td data-th="Action" class="actionname"><a href="">Edit</a></td>
+                        <td class="actionname"><a href="">Approve</a></td>
+                      </tr>
+                      <tr>
+                        <td data-th="Check"><input type="checkbox" name="check[]" class="checkbox-action"></td>
+                        <td data-th="#">2</td>
+                        <td data-th="Title"><a href="">Q894, 54 Wall St, Adelaide</a></td>
+                        <td data-th="Action" class="actionname"><a href="">Edit</a></td>
+                        <td class="actionname"><a href="">Approve</a></td>
+                      </tr>
+                      <tr>
+                        <td data-th="Check"><input type="checkbox" name="check[]" class="checkbox-action"></td>
+                        <td data-th="#">3</td>
+                        <td data-th="Title"><a href="">Q894, 54 Wall St, Adelaide</a></td>
+                        <td data-th="Action" class="actionname"><a href="">Edit</a></td>
+                        <td class="actionname"><a href="">Approve</a></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <div class="btn-action"> <a class="btn btn-success" role="button">Approve</a> <a class="btn btn-danger" role="button">Delete</a> <a class="btn btn-primary" role="button">Print</a> <a class="btn btn-primary" role="button">Email</a> </div>
+                </div>
+              </div>
+              <!-- quoting --> 
+            </div>
+            <!-- #draft-quote -->
+            
+            <div class="tab-pane" id="pending-quote">
+            <div class="tab-search-container">
+              <form class="navbar-form navbar-right" role="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Search">
+                </div>
+                <button type="submit" class="btn btn-default">Search</button>
+              </form>
+              </div><!-- tab-search-container -->
+              <div class="quoting">
+                
+                <div class="row">
+                  <table class="table zebra-stripe">
+                    <thead>
+                      <tr>
+                        <th><input type="checkbox" name="check[]" class="check-all"></th>
+                        <th>#</th>
+                        <th>Title</th>
+                        <th colspan="2" class="actiontitle">Action</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td data-th="Check"><input type="checkbox" name="check[]" class="checkbox-action"></td>
+                        <td data-th="#">1</td>
+                        <td data-th="Title"><a href="">Q894, 54 Wall St, Adelaide</a></td>
+                        <td data-th="Action" class="actionname"><a href="">Edit</a></td>
+                        <td class="actionname"><a href="">Approve</a></td>
+                      </tr>
+                      <tr>
+                        <td data-th="Check"><input type="checkbox" name="check[]" class="checkbox-action"></td>
+                        <td data-th="#">2</td>
+                        <td data-th="Title"><a href="">Q894, 54 Wall St, Adelaide</a></td>
+                        <td data-th="Action" class="actionname"><a href="">Edit</a></td>
+                        <td class="actionname"><a href="">Approve</a></td>
+                      </tr>
+                      <tr>
+                        <td data-th="Check"><input type="checkbox" name="check[]" class="checkbox-action"></td>
+                        <td data-th="#">3</td>
+                        <td data-th="Title"><a href="">Q894, 54 Wall St, Adelaide</a></td>
+                        <td data-th="Action" class="actionname"><a href="">Edit</a></td>
+                        <td class="actionname"><a href="">Approve</a></td>
+                      </tr>
+                      
+                      <tr>
+                        <td data-th="Check"><input type="checkbox" name="check[]" class="checkbox-action"></td>
+                        <td data-th="#">4</td>
+                        <td data-th="Title"><a href="">Q894, 54 Wall St, Adelaide</a></td>
+                        <td data-th="Action" class="actionname"><a href="">Edit</a></td>
+                        <td class="actionname"><a href="">Approve</a></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <div class="btn-action"> <a class="btn btn-success" role="button">Approve</a> <a class="btn btn-danger" role="button">Delete</a> <a class="btn btn-primary" role="button">Print</a> <a class="btn btn-primary" role="button">Email</a> </div>
+                </div>
+              </div>
+              <!-- quoting --> 
+            </div>
+            <!-- #pending-quote -->
+            
+            
+            <div class="tab-pane" id="archive-quote">
+            <div class="tab-search-container">
+              <form class="navbar-form navbar-right" role="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Search">
+                </div>
+                <button type="submit" class="btn btn-default">Search</button>
+              </form>
+              </div><!-- tab-search-container -->
+              <div class="quoting">
+                
+                <div class="row">
+                  <table class="table zebra-stripe">
+                    <thead>
+                      <tr>
+                        <th><input type="checkbox" name="check[]" class="check-all"></th>
+                        <th>#</th>
+                        <th>Title</th>
+                        <th colspan="2" class="actiontitle">Action</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td data-th="Check"><input type="checkbox" name="check[]" class="checkbox-action"></td>
+                        <td data-th="#">1</td>
+                        <td data-th="Title"><a href="">Q894, 54 Wall St, Adelaide</a></td>
+                        <td data-th="Action" class="actionname"><a href="">Edit</a></td>
+                        <td class="actionname"><a href="">Approve</a></td>
+                      </tr>
+                      <tr>
+                        <td data-th="Check"><input type="checkbox" name="check[]" class="checkbox-action"></td>
+                        <td data-th="#">2</td>
+                        <td data-th="Title"><a href="">Q894, 54 Wall St, Adelaide</a></td>
+                        <td data-th="Action" class="actionname"><a href="">Edit</a></td>
+                        <td class="actionname"><a href="">Approve</a></td>
+                      </tr>
+                      
+                    </tbody>
+                  </table>
+                  <div class="btn-action"> <a class="btn btn-success" role="button">Approve</a> <a class="btn btn-danger" role="button">Delete</a> <a class="btn btn-primary" role="button">Print</a> <a class="btn btn-primary" role="button">Email</a> </div>
+                </div>
+              </div>
+              <!-- quoting --> 
+            </div>
+            <!-- #archive-quote -->
+            
+            
+            
+             
+          </div>
+        </div>
+        <div class="right-content add-new-section col-md-3">
+          <h2 class="element-title">Add New Quote</h2>
+          <div class="row">
+            <div class="item col-md-6 col-sm-6 col-xs-6"><a href="#"><img src="img/add-folder-64.png">
+              <div class="title">Quick Quote</div>
+              </a></div>
+            <div class="item col-md-6 col-sm-6 col-xs-6"><a href="#"><img src="img/add-folder-64.png">
+              <div class="title">Full Estimation</div>
+              </a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- dashboard-content --> 
+</div>
+<!-- main-content -->
+<div class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12"> <img src="img/abl-copy.jpg" alt=""> </div>
+    </div>
+  </div>
+</div>
+<!-- /container -->
+
+<div class="hidden-content">
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title">Change Your Password</h4>
+        </div>
+        <div class="modal-body">
+          <form action="/app/users/changepassword" id="UserChangepasswordForm" method="post" accept-charset="utf-8">
+            <div style="display:none;">
+              <input type="hidden" name="_method" value="POST"/>
+            </div>
+            <div class="input password">
+              <label for="UserPasswordOld">Old password</label>
+              <input name="data[User][password_old]" autocomplete="off" type="password" id="UserPasswordOld"/>
+            </div>
+            <div class="input password required">
+              <label for="UserConfirmPassword">New password</label>
+              <input name="data[User][confirm_password]" autocomplete="off" type="password" id="UserConfirmPassword" required/>
+            </div>
+            <div class="input password required">
+              <label for="UserPassword">Re-enter new password</label>
+              <input name="data[User][Password]" autocomplete="off" type="password" id="UserPassword" required/>
+            </div>
+            <center>
+            <div class="submit">
+              <input  type="submit" value="Update Password"/>
+            </div>
+          </form>
+          </center>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      <!-- /.modal-content --> 
+    </div>
+    <!-- /.modal-dialog --> 
+  </div>
+  <!-- /.modal --> 
+</div>
+<script src="js/jquery.js"></script> 
+<script src="js/bootstrap.min.js"></script> 
+<script src="js/main.js"></script>
+</body>
+</html>

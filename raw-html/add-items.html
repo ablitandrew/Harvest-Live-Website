@@ -1,0 +1,217 @@
+<head><script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script></head>
+<!-- AREA-TITLE -->
+                          <!-- <div class="area-content"> -->
+                            <div class="table-container">
+                              <table class="table item-holder">
+                                <thead>
+                                  <tr>
+                                    <th class="th-item-name col-md-3">Category</th>
+                                    <th class="th-item-name col-md-5">Item Name</th>
+                                    <th class="th-item-qty col-md-1">Quantity</th>
+                                    <th class="th-item-units col-md-1">Units</th>
+                                    <th class="th-item-cost col-md-2">Cost</th>
+                                    <th class="th-item-hide col-md-1">&nbsp;</th>
+                                  </tr>
+                                </thead>
+                                <tbody id="TextBoxesGroup">
+                                  <tr id ="item" class="item-row item">
+                                  <td class="td-item-category col-md-3" style="padding-right: 0px;">
+                                  <input type="text" name="data[CustomersQuote][phase][0][area][0][items][0][category]" class="item-row-input item-category">
+                                  <input type="hidden" name="data[CustomersQuote][phase][0][area][0][items][0][catId]" id="catId0" class="catId"/>
+                                  </td>
+                                  <td class="td-item-name col-md-5" style="padding-right: 0px;">
+                                 <input type="text" name="data[CustomersQuote][phase][0][area][0][items][0][item]" class="item-row-input item-name"><input type="hidden" name="data[CustomersQuote][phase][0][area][0][items][0][itemId]" id = "itemId0" class="itemId"/>
+                                  <input type="hidden" name="data[CustomersQuote][phase][0][area][0][items][0][unit_price]" class="units_price" id = "unit_price0" />
+                                  </td>
+                                  <td class="td-item-qty col-md-1" style="padding-right: 0px;">
+                                  <input type="text" name="data[CustomersQuote][phase][0][area][0][items][0][quantity]" class="item-row-input item-qty">
+                                  </td>
+                                  <td class="td-item-units col-md-1" style="padding-right: 0px;">
+                                  <input type="text" name="data[CustomersQuote][phase][0][area][0][items][0][units]" class="item-row-input item-units">
+                                  </td>
+                                  <td class="td-item-cost col-md-1" style="padding-right: 0px;">
+                                  <input type="text" name="data[CustomersQuote][phase][0][area][0][items][0][cost]"class="item-row-input item-cost">
+                                  </td>
+                                  <td class="col-md-1" style="padding-right: 0px;">
+                                  <input type = "button" class="removeItem btn btn-danger","data" = 0,"style"="height:30px","count"=0,"disabled"="disabled" value="X">
+                                  </td>
+                                  </tr>      
+                                </tbody>
+                                <tfoot>
+                                  <tr>
+                                    <th class="total" colspan="3">Total
+                                    </th>
+                                    <th colspan="2">-&nbsp;&nbsp;
+                                      <label id="paymentamountlabel" class="paymentamountlabel"></label>
+                                    </th>
+                                  </tr>
+                                </tfoot>
+                              </table>
+                            <!--item-holder -->
+                                                     
+                              <div class="addmore add-item"> <input type = 'button' class='addItem btn btn-primary' phase-data=0 area-data=0 item-data=0)); ?></div>
+                            
+                        </div> <!-- TABLE-CONTAINER --> 
+                     <!--  </div> AREA-CONTENT -->
+
+<script type="text/javascript">
+
+    $(document).ready(function(){
+
+      var counter = 2;
+      var phase = 0;
+      var area =0;
+      var item = 0;
+
+// function to add item
+    
+    $(document).on('click',".addItem",function () {
+        
+      if(counter>20){
+            alert("Only 20 textboxes allow");
+            return false;
+        }   
+    
+        var newTextBoxTr =$(this).parent().parent().find("table.item-holder tbody#TextBoxesGroup");
+        var phase_id = $(this).attr('phase-data');
+        var area_id = $(this).attr('area-data');
+        var item_id = $(this).attr('item-data');
+          item_id++;
+          $(this).attr('item-data',item_id);  
+          
+            newTextBoxTr.append(
+                                  '<tr id ="item'+counter+'" class="item-row item'+counter+'">'+
+                                  '<td class="td-item-category col-md-3" style="padding-right: 0px;">'+
+                                  '<input type="text" name="data[CustomersQuote][phase]['+phase_id+'][area]['+area_id+'][items]['+item_id+'][category]" class="item-row-input item-category"><input type="hidden" name="data[CustomersQuote][phase]['+phase_id+'][area]['+area_id+'][items]['+item_id+'][catId]" id="catId'+item_id+'" class="catId" />'+
+                                  '</td>'+
+                                  '<td class="td-item-name col-md-5" style="padding-right: 0px;">'+
+                                  '<input type="text" name="data[CustomersQuote][phase]['+phase_id+'][area]['+area_id+'][items]['+item_id+'][item]" class="item-row-input item-name"><input type="hidden" name="data[CustomersQuote][phase]['+phase_id+'][area]['+area_id+'][items]['+item_id+'][itemId]" id = "itemId'+item_id+'" class="itemId" />'+
+                                  '<input type="hidden" name="data[CustomersQuote][phase]['+phase_id+'][area]['+area_id+'][items]['+item_id+'][unit_price]" class="units_price" id = "unit_price'+item_id+'" class="units_price" />'+
+                                  '</td>'+
+                                  '<td class="td-item-qty col-md-1" style="padding-right: 0px;">'+
+                                  '<input type="text" name="data[CustomersQuote][phase]['+phase_id+'][area]['+area_id+'][items]['+item_id+'][quantity]" class="item-row-input item-qty">'+
+                                  '</td>'+
+                                  '<td class="td-item-units col-md-1" style="padding-right: 0px;">'+
+                                  '<input type="text" name="data[CustomersQuote][phase]['+phase_id+'][area]['+area_id+'][items]['+item_id+'][units]" class="item-row-input item-units">'+
+                                  '</td>'+
+                                  '<td class="td-item-cost col-md-1" style="padding-right: 0px;">'+
+                                  '<input type="text" name="data[CustomersQuote][phase]['+phase_id+'][area]['+area_id+'][items]['+item_id+'][cost]" class="item-row-input item-cost">'+
+                                  '</td>'+
+                                  '<td class="col-md-1" style="padding-right: 0px;">'+
+                                  '<input type = "button" class="removeItem btn btn-danger" data = "item'+counter+'"style="height:30px" count="'+counter+'")); ?>'+
+                                  '</td>'+
+                                  '</tr>'                
+            );
+
+      counter++;
+    }); // end add item
+
+// function to autocomplete categories 
+
+      /*$(document).on('click',".item-category",function(){
+        $(".item-category").autocomplete({
+            serviceUrl:'<?php echo $this->webroot; ?>customersquotes/allcategory',
+            minChars:2,
+            onSelect: function (suggestion) {
+              //console.log(suggestion);
+              var cat_id = suggestion.data;
+              $(this).parent().parent().parent().find('.catId').val(suggestion.data);
+              load_item(cat_id);
+
+            }
+                     
+        });
+      });*/
+
+// function for autocomplete items according to category
+
+     /* function load_item(cat_id){
+        $(".item-name").autocomplete({
+          serviceUrl:'<?php echo $this->webroot; ?>customersquotes/items?id='+cat_id,
+          minChars:2,
+          onSelect: function (suggestion) {
+            //console.log(suggestion);
+            var itemId = $(this).attr('data');
+            $(this).parent().parent().parent().find('.item-units').val(suggestion.units);
+            $(this).parent().parent().parent().find(".item-qty").val(1); 
+            $(this).parent().parent().parent().find('.item-cost').val(suggestion.price);
+            var cost = suggestion.price;
+            $(this).parent().parent().parent().find('.itemId').val(suggestion.data);
+            $(this).parent().parent().parent().find('.units_price').val(suggestion.price);
+            newTotalCost();
+          }
+        });
+      }*/
+           
+      
+// calling of newTotalCost function on quantity change
+
+      $(document).on('change',".item-qty",function () {
+          newTotalCost();
+      });
+
+// calling of newTotalAmount function on cost change
+
+      $(document).on('change',".item-cost",function () {
+          newTotalAmount();
+      });
+
+// function to calculate unit price of an item on the basis of cost change
+
+      newTotalAmount = function(){
+        var total_amount = 0;
+        $( ".item-cost" ).each(function( index ) {
+          var item_cost = $(this).val();
+          var qty = $(this).parent().parent().parent().find('.item-qty').val();
+          var unit_price = 0 ;
+          if(qty != 0)
+            unit_price = item_cost / qty;
+          $(this).parent().parent().parent().find('.units_price').val(unit_price); 
+          total_amount = total_amount + parseFloat(item_cost);
+        });
+        $(".paymentamountlabel").empty();
+        $(".paymentamountlabel").html(total_amount);
+      };
+
+// function to calculate unit price of an item on the basis of quantity change
+
+      newTotalCost = function(){
+        var total_amount = 0;
+        $( ".item-qty" ).each(function( index ) {
+          var qty = $(this).val();
+          var unit_price = $(this).parent().parent().parent().find('.units_price').val();
+          console.log( index + ": " + unit_price);
+          var price = 0;
+          if(qty != 0)
+            price = qty * unit_price;
+          $(this).parent().parent().parent().find('.item-cost').val(price);
+          total_amount = parseFloat(total_amount) + parseFloat(price);  
+        });
+        $(".paymentamountlabel").empty();
+        $(".paymentamountlabel").html(total_amount);  
+      }
+
+      //function to remove Item 
+
+    $(document).on('click',".removeItem",function () {
+      if(counter==1){
+        alert("No more textbox to remove");
+        return false;
+      }   
+      counter--;
+      var sum = 0;
+      var data = $(this).attr('data');
+      var val = $('#paymentamountlabel').text();
+      var sub = $("#"+data).find(".item-cost").val();
+      var total = 0;
+      if (!isNaN(sub) && sub.length != 0) {
+               sum -= parseFloat(sub);
+      }
+      $('.paymentamountlabel').html('');
+      total =  parseFloat(val) + parseFloat(sum);   
+      $('.paymentamountlabel').text(total);
+      $("."+$(this).attr('data')).remove();
+         
+    });
+});
+</script>
